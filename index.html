@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ThermaSeat Smart Chair</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="hero fade">
+  <h1>ThermaSeat Smart Chair</h1>
+  <p>A modern smart chair that can heat and cool itself, fully controlled through a mobile application.</p>
+  <button id="toggleDark">🌙 Toggle Dark Mode</button>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#features">Features</a></li>
+    <li><a href="#technology">Technology</a></li>
+    <li><a href="#app">Mobile App</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<section id="about" class="fade">
+  <h2>About the Product</h2>
+  <p>
+    ThermaSeat Smart Chair is designed to maximize comfort using modern design and smart technology. With integrated heating and cooling systems and IoT connectivity, users can adjust chair temperature anytime, anywhere.
+  </p>
+</section>
+
+<section id="features" class="fade">
+  <h2>Key Features</h2>
+  <div class="grid">
+    <div class="card">🔥 Automatic Heating</div>
+    <div class="card">❄️ Adaptive Cooling</div>
+    <div class="card">📱 Smartphone Control</div>
+    <div class="card">⚡ Energy Efficient</div>
+  </div>
+</section>
+
+<section id="technology" class="fade">
+  <h2>Technology Stack</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>🌐 Internet of Things (IoT)</h3>
+      <p>The chair is connected via IoT modules (ESP32) enabling real-time communication.</p>
+    </div>
+    <div class="card">
+      <h3>🌡️ Smart Sensors</h3>
+      <p>Temperature and occupancy sensors automatically adjust heating and cooling.</p>
+    </div>
+    <div class="card">
+      <h3>☁️ Cloud & API</h3>
+      <p>REST API connects the chair, mobile app, and cloud database for data synchronization.</p>
+    </div>
+    <div class="card">
+      <h3>📲 Mobile Application</h3>
+      <p>Built using Flutter/React Native for cross-platform Android & iOS support.</p>
+    </div>
+  </div>
+</section>
+
+<section id="app" class="fade">
+  <h2>Mobile Application</h2>
+  <p>Control temperature, modes, schedules, and view usage analytics directly from your phone.</p>
+</section>
+
+<section id="contact" class="fade">
+  <h2>Contact Us</h2>
+  <p>Email: info@kizunachair.com | Phone: +62 8xxxxxxxxxx</p>
+</section>
+
+<footer>
+  <p>&copy; 2025 ThermaSeat Smart Chair. All Rights Reserved.</p>
+</footer>
+
+<script>
+  // Dark mode toggle
+  document.getElementById('toggleDark').onclick = () => {
+    document.body.classList.toggle('dark');
+  };
+
+  // Scroll animation
+  const faders = document.querySelectorAll('.fade');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('show');
+    });
+  }, { threshold: 0.2 });
+
+  faders.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
