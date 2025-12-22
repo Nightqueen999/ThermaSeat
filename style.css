@@ -30,6 +30,7 @@ nav {
   top: 0;
   background: white;
   padding: 15px;
+  z-index: 1;
 }
 
 nav ul {
